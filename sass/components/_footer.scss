@@ -1,0 +1,159 @@
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $color-bg-gray; 
+}
+
+.footer {
+    display: flex;
+    align-items: baseline;
+}
+
+.info {
+    width: 231px;
+    margin-right: 70px;
+}
+
+.info__logo {
+    margin-right: auto;
+
+    color: $color-white-primary;
+
+    font-family: $secondary-font;
+    font-size: 26px;
+    line-height: 1.17;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.info__web {
+    color: $color-accent;
+}
+
+.info__address {
+    margin-top: 28px;
+    margin-right: auto;
+    
+    color: $color-white-primary;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.footer-list {
+    margin-top: 12px;
+}
+
+.footer-list__item:not(:first-child) {
+    margin-top: 12px;
+}
+.footer-list__link,
+.footer-list__tel {
+    color: $color-footer-white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.communication {
+    margin-right: 93px;
+}
+
+.communication__title {
+    margin: 0 90px 20px 0;
+
+    color: $color-white-primary;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+}
+.communication-list {
+    display: flex;
+}
+
+.communication-list__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.communication-list__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: $color-social-bg;
+    fill: $color-white-primary;
+
+    transition-property: background-color;
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+        background-color: $color-accent;
+    }
+}
+
+.sub {
+    width: 570px;
+    height: 86px;
+
+    margin-right: 0;
+}
+
+.sub__title {
+    margin: 0;
+
+    color: $color-white-primary;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+}
+.form {
+    display: flex;
+    
+    margin-top: 20px;
+}
+.form__text {
+    width: 358px;
+    height: 50px;
+    border: 1px solid $color-footer-gray;
+    border-radius: 4px;
+    
+    margin-right: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+
+    background-color: $color-bg-gray;
+    color: $color-footer-white;
+
+    &:focus {
+        border-color: $color-accent;
+    }
+}
+
+.form__btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    background-color: $color-accent;
+    border-color: transparent;
+    cursor: pointer;
+
+    font-size: 16px;
+    line-height: 1.88;
+    color: $color-white-primary;
+}
+
+.form__el {
+    margin-left: 10px;
+    fill: $color-white-primary;
+}

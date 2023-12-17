@@ -1,0 +1,42 @@
+
+.client {
+    display: flex;
+    justify-content: center;
+}
+
+.section__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: $color-title-primary;
+    font-size: 36px;
+    line-height: 1.17;
+}
+
+.client__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    
+    fill: $color-border;
+
+    transition-property: fill, border;
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+        fill: $color-accent;
+        border: 1px solid $color-accent;
+    }
+}

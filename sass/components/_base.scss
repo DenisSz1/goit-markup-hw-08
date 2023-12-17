@@ -1,0 +1,47 @@
+
+body {
+    background-color: $color-white-primary;
+    color: $color-text-primary;
+    font-family: $main-font;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aside {
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+    display: block;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}

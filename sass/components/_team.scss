@@ -1,0 +1,92 @@
+.team .container {
+    flex-wrap: wrap;
+}
+
+.team {
+    background-color: $color-bg-white;
+}
+
+.team-card {
+    display: flex;
+}
+
+.team-card__item {
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.14)
+}
+
+.team-card__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: $color-title-primary;
+
+    font-size: 36px;
+    line-height: 1.17;
+}
+
+.person-descriptions {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+.person-descriptions__subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+
+    color: $color-title-primary;
+
+    font-size: 16px;
+    line-height: 1.17; 
+    font-weight: 500;
+}
+
+.team-card p {
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.social__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+    fill: $color-border;
+
+    transition-property: border-radius, background-color, fill;
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+        border-radius: 50%;
+        background-color: $color-accent;
+        fill: $color-white-primary;
+    }
+}
+
+.social__item:not(:last-child) {
+    margin-right: 10px;
+}
+

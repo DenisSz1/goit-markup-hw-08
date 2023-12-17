@@ -1,0 +1,29 @@
+/*variable*/
+@import './utils/vars';
+@import './utils/placeholder';
+
+/*base style*/
+@import './components/base';
+
+/*header*/
+@import './components/navigation';
+
+/*main*/
+@import './components/main-section';
+/*modal*/
+@import './components/modal';
+
+@import './components/features';
+@import './components/our-works';
+@import './components/team';
+@import './components/clients';
+
+/*btn portfolio*/
+@import './components/btn-filter';
+
+/*portfolio*/
+@import './components/portfolio';
+
+/*footer*/
+@import './components/footer';
+

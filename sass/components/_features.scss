@@ -1,0 +1,42 @@
+/*section features*/
+
+.feature {
+    display: flex;
+}
+
+.feature__item--size {
+    width: 270px;
+}
+
+.feature__subtitle {
+    margin: 0;
+
+    color: $color-title-primary;
+
+    font-size: 14px;
+    line-height: 1.17;
+}
+
+.feature p {
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.feature__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.feature__icon-bg {
+    display: flex;
+    height: 120px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    
+    background-color: $color-bg-white;
+}

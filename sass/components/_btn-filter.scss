@@ -1,0 +1,35 @@
+.filter {
+    display: flex;
+    justify-content: center;
+}
+
+.filter__btn {
+    padding: 6px 22px;
+    border: none;
+    border-radius: 4px;
+
+    color: $color-title-primary;
+    background: $color-btn-filter;
+
+    font-size: 16px;
+    line-height: 1.63;
+    font-weight: 500;
+    cursor: pointer;
+
+    
+    transition-property: color, background, box-shadow;
+    @extend %transition;
+
+    &:focus,
+    &:hover {
+        color: $color-white-primary;
+        background: $color-accent;
+    
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);  
+    }
+
+}
+
+.filter__item:not(:last-child){
+    margin-right: 8px;
+}
