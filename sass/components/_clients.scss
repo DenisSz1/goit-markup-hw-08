@@ -1,6 +1,7 @@
 
 .client {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -15,17 +16,28 @@
     line-height: 1.17;
 }
 
-.client__item:not(:last-child) {
+
+.client__item {
+    
+    width: calc((100% - 30px) / 2);
     margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+    }
 }
 
 .client__link {
     display: flex;
-    width: 170px;
-    height: 92px;
     justify-content: center;
     align-items: center;
-
+    width: 210px;
+    height: 92px;
     border: 1px solid $color-border;
     border-radius: 4px;
     

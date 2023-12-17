@@ -1,14 +1,7 @@
-.team .container {
-    flex-wrap: wrap;
-}
-
 .team {
     background-color: $color-bg-white;
 }
 
-.team-card {
-    display: flex;
-}
 
 .team-card__item {
     border-radius: 0 0 4px 4px;
@@ -17,20 +10,16 @@
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.14)
 }
 
-.team-card__item:not(:last-child) {
-    margin-right: 30px;
-}
 
 .team__title {
     margin-top: 0;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 30px;
+    
     text-align: center;
 
     color: $color-title-primary;
 
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
 }
 
@@ -89,4 +78,3 @@
 .social__item:not(:last-child) {
     margin-right: 10px;
 }
-

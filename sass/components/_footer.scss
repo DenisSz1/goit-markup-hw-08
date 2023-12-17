@@ -1,23 +1,14 @@
 footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
+    text-align: center;
     background-color: $color-bg-gray; 
 }
 
-.footer {
-    display: flex;
-    align-items: baseline;
-}
-
 .info {
-    width: 231px;
-    margin-right: 70px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .info__logo {
-    margin-right: auto;
-
     color: $color-white-primary;
 
     font-family: $secondary-font;
@@ -31,10 +22,7 @@ footer {
     color: $color-accent;
 }
 
-.info__address {
-    margin-top: 28px;
-    margin-right: auto;
-    
+.info__address {  
     color: $color-white-primary;
     font-size: 14px;
     font-style: normal;
@@ -54,13 +42,8 @@ footer {
     text-decoration: none;
 }
 
-.communication {
-    margin-right: 93px;
-}
-
 .communication__title {
-    margin: 0 90px 20px 0;
-
+    
     color: $color-white-primary;
     font-size: 14px;
     font-weight: 700;
@@ -68,6 +51,7 @@ footer {
 }
 .communication-list {
     display: flex;
+    justify-content: center;
 }
 
 .communication-list__item:not(:last-child) {
@@ -96,14 +80,13 @@ footer {
 }
 
 .sub {
-    width: 570px;
-    height: 86px;
-
+    
     margin-right: 0;
 }
 
 .sub__title {
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
 
     color: $color-white-primary;
     font-size: 14px;
@@ -111,8 +94,7 @@ footer {
     line-height: 1.17;
 }
 .form {
-    display: flex;
-    
+        
     margin-top: 20px;
 }
 .form__text {
@@ -139,8 +121,7 @@ footer {
     height: 50px;
     border-radius: 4px;
 
-    display: flex;
-    align-items: center;
+    
     padding-left: 28px;
     padding-right: 28px;
 
