@@ -14,43 +14,56 @@
     <header>
         <div class="container aside">
             <a href="" class="logo"><span class="logo__web">Web</span>Studio</a>
-            <nav>
-            <ul class="nav list">
-                <li class="nav__item">
-                    <a href="" class="nav__link nav__link--current">Студія</a>
-                </li>
-                <li class="nav__item">
-                    <a href="./portfolio.html" class="nav__link">Портфоліо</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Контакти</a>
-                </li>
-            </ul>
-            </nav>
-            <ul class="contact list">
-                <li class="contact__item">
-                    <a href="mailto:info@devstudio.com" class="contact__link">
-                        <svg class="contact__link-icon" width="16px" height="12px" >
-                            <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="contact__item">
-                    <a href="tel:+380961111111" class="contact__tel">
-                        <svg class="contact__tel-icon" width="10px" height="16px">
-                            <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+            <button type="button" class="menu-button is-open" data-menu-button>
+                <svg  
+                    width="40px" 
+                    height="40px"
+                    aria-label="Переключатель меню"
+                    aria-expanded="false">
+                    <use class="icon-menu" href="./images/mobile.svg#icon-menu_mob"></use>
+                    <use class="icon-cross" href="./images/mobile.svg#icon-close_mob"></use>
+                </svg>
+            </button>
+            <div class="menu-container is-open" data-menu>
+                <nav>
+                    <ul class="nav list">
+                        <li class="nav__item">
+                            <a href="" class="nav__link nav__link--current">Студія</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./portfolio.html" class="nav__link">Портфоліо</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link">Контакти</a>
+                        </li>
+                    </ul>
+                    </nav>
+                    <ul class="contact list">
+                        <li class="contact__item">
+                            <a href="tel:+380961111111" class="contact__tel">
+                                <svg class="contact__tel-icon" width="10px" height="16px">
+                                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="contact__item">
+                            <a href="mailto:info@devstudio.com" class="contact__link">
+                                <svg class="contact__link-icon" width="16px" height="12px" >
+                                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+            
         </div>
         
     </header>
         
     <main>
-        <section class="main section">
+        <section class="main ">
             <div class="container">
                 <h1 class="main__banner">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
                 <button data-modal-open type="button" class="main__btn">Замовити послугу</button>
@@ -453,6 +466,7 @@
         </div>
     </div>
 
-    <script src="./modal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
