@@ -37,6 +37,7 @@ header .container {
     padding: 0;
     border: none;
     background-color: transparent;
+    
 }
 
 .menu-button .icon-cross {
@@ -45,24 +46,21 @@ header .container {
 
 .menu-button.is-open .icon-cross {
     display: block;
+    
+    
 }
 
 .menu-button.is-open .icon-menu {
     display: none;
 }
 
-.menu-button.is-open .icon-menu + .logo{
-    display: none;
-}
-
-
-
 .menu-container {
     display: none;
     position: absolute;
-    top: 100%;
+    
+    top: 0%;
     left: 0;
-    width: 100%;
+    width: 480px;
 
     height: 796px;
 
@@ -70,9 +68,12 @@ header .container {
     &.is-open {
         display: flex;
         flex-direction: column;
+                
+        padding-top: 48px;
         padding-left: 40px;
 
         background-color: $color-white-primary;
+        
     }
 }
 

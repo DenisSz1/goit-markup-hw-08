@@ -4,14 +4,20 @@ body {
     font-family: $main-font;
 }
 
-@media screen and (min-width: 480px) {
-    
-    
 .container {
     width: 450px;
 
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 738px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .list {
@@ -37,4 +43,8 @@ body {
     padding-top: 60px;
     padding-bottom: 60px;
 } 
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }

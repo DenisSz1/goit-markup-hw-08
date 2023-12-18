@@ -6,11 +6,28 @@ footer {
     background-color: $color-bg-gray; 
 }
 
+.wrap {
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: baseline
+
+    }
+}
+
 .info {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+
+    @media screen and (min-width:480px) and (max-width:768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-left: 61px;
+        
+    }
+    
 }
 
 .info__logo {
@@ -52,7 +69,15 @@ footer {
 }
 
 .communication {
-    margin-bottom: 60px;
+    @media screen and (min-width:480px) and (max-width:768px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-left: 165px;
+        
+    }
+    
 }
 
 .communication__title {
@@ -95,7 +120,6 @@ footer {
 }
 
 .sub {
-    
     margin-right: 0;
 }
 
@@ -107,10 +131,17 @@ footer {
     font-weight: 700;
     line-height: 1.17;
 }
+
 .form {
-        
-    margin-top: 20px;
+    
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
+
 .form__text {
     width: 358px;
     height: 50px;
@@ -130,6 +161,11 @@ footer {
 
     &:focus {
         border-color: $color-accent;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 450px;
+            height: 50px;
     }
 }
 
