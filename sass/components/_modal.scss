@@ -22,8 +22,6 @@
     top: 50%;
     left: 50%; 
 
-    width: 528px;  
-    height: 581px;
     border-radius: 4px;
 
     padding: 40px;
@@ -34,6 +32,11 @@
     transition-property: transform;
     @extend %transition;
     transform: translate(-50%, -50%) scale(1);
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        width: 450px;  
+        height: 609px;
+    }
 }
 
 .backdrop.is-hidden .modal {
@@ -66,13 +69,15 @@
 
 .modal__title {
     display:flex;
-    justify-content: center;
+    text-align: center;
     margin-top: 0;
     margin-bottom: 12px;
 
     font-size: 20px;
     line-height: 1.17;
     color: $color-title-primary;
+    font-family: Roboto;
+    letter-spacing: 0.03em;
 }
 
 .form-el {
@@ -92,8 +97,8 @@
 }
 
 .form-el__content {
-    width: 448px;
     height: 40px;
+
     border: 1px solid $color-border-form;
     border-radius: 4px;
 
@@ -115,6 +120,14 @@
 
     &:focus + .form-el_icon {
         border-color: $color-accent;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 370px;   
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 448px;  
     }
 }
 
@@ -150,6 +163,14 @@
     &:focus {
         border-color: $color-accent;
     }
+
+    @media screen and (min-width: 480px) {
+        width: 370px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 448px;
+    }
 }
 
 .form-box {
@@ -162,6 +183,16 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
+
+    @media screen and (min-width: 480px) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .label__checkbox {

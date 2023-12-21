@@ -30,19 +30,20 @@ header .container {
     color: $color-accent;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (min-width:480px) and (max-width:767px) {
     .menu-container {
         display: none;
         position: absolute;
-        
         top: 0;
         left: 0;
-        width: 480px;
+        max-width: 480px;
     
         
         &.is-open {
             display: flex;
             flex-direction: column;
+            
+            
                             
             padding-top: 48px;
             padding-bottom: 48px;
@@ -69,33 +70,30 @@ header .container {
     
     .menu-button.is-open .icon-cross {
         display: block;
+        position: absolute;
     
     }
     
     .menu-button.is-open .icon-menu {
         display: none;
     }
-    
-     .nav__link {
+
+    .nav__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    .nav__link {
         font-size: 40px;
         line-height: 1.17;
         color: rgb(33, 33, 33);
         text-decoration: none;
        
-     }
-    
-     .nav__item:not(:last-child) {
-        margin-bottom: 32px;
-     }
-    
-     .nav__link:focus, .nav__link:hover {
-         color: rgb(33, 150, 243);
-     }
-      
-    .nav {
-        margin-bottom: 306px;
     }
-      
+    
+    .nav__link:focus, .nav__link:hover {
+         color: rgb(33, 150, 243);
+    }
+          
     .contact {
         display: flex;
         flex-direction: column-reverse;
@@ -191,15 +189,6 @@ header .container {
         display: flex;
         align-items: center;
     }
-
-    .nav {
-        display: flex;
-        margin-right: 101px;
-        
-        font-size: 14px;
-        line-height: 1.17;
-        font-weight: 500;  
-    }
     
     .nav__item:not(:last-child) {
         margin-right: 50px;
@@ -223,48 +212,7 @@ header .container {
             color: $color-accent;
         }
     }
-    
-    .contact {
-        display: flex;
-        flex-direction: column;
-        margin-right: 0;
-        
-    }
-
-    .contact__item:not(:last-child) {
-        margin-bottom: 10px;
-    }
-          
-    .contact__link,
-    .contact__tel {
-        display: flex;
-        align-items: center;
-    
-        color: $color-text-primary;
-        
-        font-size: 12px;
-        line-height: 1.17;
-        font-weight: 500;
-        text-decoration: none;
-             
-        &:focus,
-        &:hover {
-            color: $color-accent;
-        }
-    }
-    
-    .contact__tel-icon {
-        margin-right: 8px;
-       
-        fill: currentColor;
-    }
-    
-    .contact__link-icon {
-        margin-right: 8px;
-    
-        fill: currentColor;
-    }
-    
+     
     .nav__link--current {
         color: $color-accent;
     
@@ -281,5 +229,93 @@ header .container {
     
             background-color: $color-accent;
         }
+    }
+}
+
+.nav {    
+    font-size: 14px;
+    line-height: 1.17;
+    font-weight: 500; 
+    
+    @media screen and (max-width:767px) {
+        margin-bottom: 306px;
+    }
+
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-right: 101px;
+    }  
+}
+
+.contact {
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+    
+    @media screen and (min-width:768px) and (max-width:1199px){
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: 305px;
+    }   
+}
+
+.contact__item:not(:last-child) {
+    @media screen and (min-width:768px) and (max-width:1199px){
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 30px;
+    }
+}
+      
+.contact__link,
+.contact__tel {
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: center;
+
+        color: $color-text-primary;
+
+        font-weight: 500;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+        color: $color-accent;
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px){
+        font-size: 12px;
+        line-height: 1.17;
+    } 
+}
+
+.contact__tel-icon {
+    @media screen and (min-width:768px) {
+        fill: currentColor;
+        margin-right: 8px;
+    } 
+    
+    @media screen and (min-width:1200px) {
+        margin-right: 10px;
+    }
+}
+
+.contact__link-icon {
+    @media screen and (min-width:768px) {
+        fill: currentColor;
+        margin-right: 8px;
+    } 
+    
+    @media screen and (min-width:1200px) {
+        margin-right: 10px;
     }
 }

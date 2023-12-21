@@ -56,10 +56,42 @@
     }
 }
 
+@media screen and (min-width:1200px) {
+    .main {
+        max-width: 1600px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 200px;
+        padding-bottom: 200px;
+    
+        background-color: rgba(196, 196, 196, 1);
+        background-image: linear-gradient(
+            to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+            ),
+        url(../images/Header.jpg);
+        background-size: 768px 400px;
+    
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            .box {
+                background-image: url('Header@2x.jpg');
+            }
+        }
+    
+    }
+}
 
+.main {
+    background-color: $color-bg-gray;
+}
+
+.main .container {
+    display: block;
+}
 
 .main__banner {
-    width: 360px;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
@@ -68,9 +100,21 @@
 
     color: $color-white-primary;
 
-    font-size: 26px;
-    line-height: 1.61;
-    font-weight: 900;
+    @media screen and (min-width:480px) {
+        width: 360px;
+
+        font-size: 26px;
+        line-height: 1.61;
+        font-weight: 900;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 696px;
+
+        font-size: 44px;
+        line-height: 1.36;
+        font-weight: 900;
+    }
 }
 
 .main__btn {

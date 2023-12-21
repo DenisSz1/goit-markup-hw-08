@@ -2,8 +2,11 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    text-align: center;
     background-color: $color-bg-gray; 
+
+    @media screen and (min-width:480px) and (max-width:1199px){
+        text-align: center;
+    }
 }
 
 .wrap {
@@ -14,25 +17,30 @@ footer {
     }
 }
 
+.footer {
+    @media screen and (min-width:1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
 .info {
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (min-width:480px) and (max-width:768px) {
-        margin-left: auto;
-        margin-right: auto;
+    @media screen and (min-width:480px) and (max-width:767px) {
+        display: flex;
+        flex-direction: column;
     }
 
-    @media screen and (min-width:768px) {
-        margin-left: 61px;
-        
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-left: 61px;      
     }
-    
+
+    @media screen and (min-width:1200px) {
+        width: 231px;
+        margin-right: 70px;      
+    } 
 }
 
 .info__logo {
-    margin-bottom: 28px;
-
     color: $color-white-primary;
 
     font-family: $secondary-font;
@@ -40,6 +48,15 @@ footer {
     line-height: 1.17;
     font-weight: 700;
     text-decoration: none;
+
+    @media screen and (min-width:480px) and (max-width:1199px) {
+        display: block;
+        margin-bottom: 28px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: auto;
+    }
 }
 
 .info__web {
@@ -47,11 +64,18 @@ footer {
 }
 
 .info__address {  
-    margin-bottom: 60px;
-
     color: $color-white-primary;
     font-size: 14px;
     font-style: normal;
+
+    @media screen and (min-width:480px) and (max-width:1199px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-top: 28px;
+        margin-right: auto;
+    }
 }
 
 .footer-list {
@@ -61,6 +85,7 @@ footer {
 .footer-list__item:not(:first-child) {
     margin-top: 12px;
 }
+
 .footer-list__link,
 .footer-list__tel {
     color: $color-footer-white;
@@ -69,29 +94,41 @@ footer {
 }
 
 .communication {
-    @media screen and (min-width:480px) and (max-width:768px) {
+    @media screen and (min-width:480px) and (max-width:767px) {
         margin-bottom: 60px;
     }
 
-    @media screen and (min-width:768px) {
-        margin-left: 165px;
-        
+    @media screen and (min-width:768px) and (max-width:1199px){
+        margin-left: 165px;       
     }
     
+    @media screen and (min-width:1200px) {
+        margin-right: 93px;       
+    }
 }
 
 .communication__title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    
     color: $color-white-primary;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.17;
+
+    @media screen and (min-width:480px) and (max-width:1199px) {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin: 0 90px 20px 0;       
+    }
 }
+
 .communication-list {
     display: flex;
-    justify-content: center;
+
+    @media screen and (min-width:480px) and (max-width:767px) {
+        justify-content: center;
+    }
 }
 
 .communication-list__item:not(:last-child) {
@@ -121,6 +158,11 @@ footer {
 
 .sub {
     margin-right: 0;
+
+    @media screen and (min-width:1200px) {
+        width: 570px;
+        height: 86px;
+    }
 }
 
 .sub__title {
@@ -130,24 +172,34 @@ footer {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.17;
+
+    @media screen and (min-width:480px) and (max-width:1199px) {
+        margin: 0 auto 20px auto;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin: 0;
+    }
 }
 
 .form {
-    
     @media screen and (min-width:768px) {
         display: flex;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px){
         flex-direction: column;
         align-items: center;
     }
-    
+
+    @media screen and (min-width:1200px) {
+        margin-top: 20px;
+    }
 }
 
 .form__text {
-    width: 358px;
     height: 50px;
 
-    margin-bottom: 20px;
-    
     border: 1px solid $color-footer-gray;
     border-radius: 4px;
     
@@ -163,9 +215,13 @@ footer {
         border-color: $color-accent;
     }
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:480px) and (max-width:1199px){
         width: 450px;
-            height: 50px;
+        margin-bottom: 20px;    
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 358px;
     }
 }
 
