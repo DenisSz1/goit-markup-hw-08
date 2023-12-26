@@ -18,7 +18,7 @@
 
 
 .client__item {
-    @media screen and (min-width:480px) and (max-width:767px) {
+    @media screen and (max-width:767px) {
         width: calc((100% - 30px) / 2);
         margin-right: 30px;
         margin-bottom: 30px;
@@ -59,6 +59,8 @@
     align-items: center;
     border: 1px solid $color-border;
     border-radius: 4px;
+
+    height: 92px;
     
     fill: $color-border;
 
@@ -71,18 +73,18 @@
         border: 1px solid $color-accent;
     }
 
-    @media screen and (min-width:480px) {
+    @media screen and (max-width:767px) {
         width: 210px;
-        height: 92px;
+        
     }
     
     @media screen and (min-width:768px) {
         width: 226px;
-        height: 92px;
+        
     }
 
     @media screen and (min-width:1200px) {
         width: 170px;
-        height: 92px;
+        
     }
 }

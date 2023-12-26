@@ -36,7 +36,7 @@ body {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -103,7 +103,7 @@ header .container {
   color: rgb(33, 150, 243);
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .menu-container {
     display: none;
     position: absolute;
@@ -350,7 +350,7 @@ header .container {
 }
 
 /*main*/
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .main {
     max-width: 480px;
     height: 400px;
@@ -363,7 +363,7 @@ header .container {
     background-size: 480px 400px;
   }
 }
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .main .box {
     background-image: url("Header@2x.jpg");
   }
@@ -420,7 +420,7 @@ header .container {
   text-align: center;
   color: rgb(255, 255, 255);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .main__banner {
     width: 360px;
     font-size: 26px;
@@ -481,7 +481,7 @@ header .container {
   transition-property: transform;
   transform: translate(-50%, -50%) scale(1);
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .modal {
     width: 450px;
     height: 609px;
@@ -553,7 +553,7 @@ header .container {
 .form-el__content:focus + .form-el_icon {
   border-color: rgb(33, 150, 243);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .form-el__content {
     width: 370px;
   }
@@ -596,7 +596,7 @@ header .container {
 .form-el__area:focus {
   border-color: rgb(33, 150, 243);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .form-el__area {
     width: 370px;
   }
@@ -616,9 +616,8 @@ header .container {
   align-items: center;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.71;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .label {
     font-size: 12px;
     line-height: 1.17;
@@ -697,7 +696,7 @@ header .container {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .feature__item--size {
     width: 450px;
   }
@@ -713,7 +712,7 @@ header .container {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .feature__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -840,7 +839,7 @@ header .container {
   background-color: #fff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.14);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .team-card__item {
     width: 450px;
   }
@@ -932,7 +931,7 @@ header .container {
   line-height: 1.17;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .client__item {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
@@ -970,6 +969,7 @@ header .container {
   align-items: center;
   border: 1px solid rgb(175, 177, 184);
   border-radius: 4px;
+  height: 92px;
   fill: rgb(175, 177, 184);
   transition-property: fill, border;
 }
@@ -977,22 +977,19 @@ header .container {
   fill: rgb(33, 150, 243);
   border: 1px solid rgb(33, 150, 243);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .client__link {
     width: 210px;
-    height: 92px;
   }
 }
 @media screen and (min-width: 768px) {
   .client__link {
     width: 226px;
-    height: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
   .client__link {
     width: 170px;
-    height: 92px;
   }
 }
 
@@ -1004,7 +1001,7 @@ footer {
   padding-bottom: 60px;
   background-color: rgb(47, 48, 58);
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   footer {
     text-align: center;
   }
@@ -1024,7 +1021,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .info {
     display: flex;
     flex-direction: column;
@@ -1050,7 +1047,7 @@ footer {
   font-weight: 700;
   text-decoration: none;
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .info__logo {
     display: block;
     margin-bottom: 28px;
@@ -1071,7 +1068,7 @@ footer {
   font-size: 14px;
   font-style: normal;
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .info__address {
     margin-bottom: 60px;
   }
@@ -1098,7 +1095,7 @@ footer {
   text-decoration: none;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .communication {
     margin-bottom: 60px;
   }
@@ -1120,7 +1117,7 @@ footer {
   font-weight: 700;
   line-height: 1.17;
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .communication__title {
     margin-top: 0;
     margin-bottom: 20px;
@@ -1135,7 +1132,7 @@ footer {
 .communication-list {
   display: flex;
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .communication-list {
     justify-content: center;
   }
@@ -1177,7 +1174,7 @@ footer {
   font-weight: 700;
   line-height: 1.17;
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .sub__title {
     margin: 0 auto 20px auto;
   }
@@ -1219,7 +1216,7 @@ footer {
 .form__text:focus {
   border-color: rgb(33, 150, 243);
 }
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .form__text {
     width: 450px;
     margin-bottom: 20px;
