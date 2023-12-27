@@ -14,14 +14,14 @@
         background-image: linear-gradient(
             to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
             ),
-        url(../images/Header.jpg);
-        background-size: 480px 400px;
+        url(../images/Header480.jpg);
+        background-size: cover;
     
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             .box {
-                background-image: url('Header@2x.jpg');
+                background-image: url('Header480@2x.jpg');
             }
         }
     
@@ -42,14 +42,14 @@
         background-image: linear-gradient(
             to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
             ),
-        url(../images/Header.jpg);
-        background-size: 768px 400px;
+        url(../images/Header768.jpg);
+        background-size: cover;
     
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             .box {
-                background-image: url('Header@2x.jpg');
+                background-image: url('Header768@2x.jpg');
             }
         }
     
@@ -69,14 +69,14 @@
         background-image: linear-gradient(
             to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
             ),
-        url(../images/Header.jpg);
-        background-size: 768px 400px;
+        url(../images/Header1200.jpg);
+        background-size: cover;
     
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
             .box {
-                background-image: url('Header@2x.jpg');
+                background-image: url('Header1200@2x.jpg');
             }
         }
     
