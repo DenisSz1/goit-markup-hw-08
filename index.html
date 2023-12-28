@@ -69,6 +69,7 @@
                 <svg  
                     width="40px" 
                     height="40px"
+                    role="button"
                     aria-label="Переключатель меню"
                     aria-expanded="false">
                     <use class="icon-menu" href="./images/mobile.svg#icon-menu_mob"></use>
@@ -204,8 +205,12 @@
                     </li>
                     <li class="team-card__item">
                         <img 
-                            srcset="./images/frontend-developer.jpg 1x, ./images/frontend-developer@2x.jpg 2x" 
-                            src="./images/frontend-developer.jpg" alt="Frontend Developer" >
+                        srcset="
+                        ./images/f-designer480.jpg 480w, 
+                        ./images/f-designer768.jpg 768w,
+                        ./images/f-designer1200.jpg 1200w"
+                        src="./images/f-designer480.jpg" alt="Frontend Developer" 
+                        sizes="(max-width:767px) 480px, (max-width:1199px) 768px, (min-width:1200px) 1200px ">
                         <div class="person-descriptions">
                             <h3 class="person-descriptions__subtitle">Ольга Рєпіна</h3>
                             <p>Frontend Developer</p>
@@ -243,8 +248,12 @@
                     </li>
                     <li class="team-card__item">
                         <img 
-                            srcset="./images/marketing.jpg 1x, ./images/marketing@2x.jpg 2x"
-                            src="./images/marketing.jpg" alt="Marketing" ">
+                        srcset="
+                        ./images/marketing480.jpg 480w, 
+                        ./images/marketing768.jpg 768w,
+                        ./images/marketing1200.jpg 1200w"
+                        src="./images/marketing480.jpg" alt="Marketing" 
+                        sizes="(max-width:767px) 480px, (max-width:1199px) 768px, (min-width:1200px) 1200px ">
                         <div class="person-descriptions">
                             <h3 class="person-descriptions__subtitle">Микола Тарасов</h3>
                             <p>Marketing</p>
@@ -282,8 +291,12 @@
                     </li>
                     <li class="team-card__item">
                         <img 
-                            srcset="./images/ui-designer.jpg 1x, ./images/ui-designer@2x.jpg 2x"
-                            src="./images/ui-designer.jpg" alt="UI Designer" >
+                        srcset="
+                        ./images/ui480.jpg 480w, 
+                        ./images/ui768.jpg 768w,
+                        ./images/ui1200.jpg 1200w"
+                        src="./images/ui480.jpg" alt="UI Designer" 
+                        sizes="(max-width:767px) 480px, (max-width:1199px) 768px, (min-width:1200px) 1200px ">
                         <div class="person-descriptions">
                             <h3 class="person-descriptions__subtitle">Михайло Єрмаков</h3>
                             <p>UI Designer</p>

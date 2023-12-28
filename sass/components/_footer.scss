@@ -3,6 +3,7 @@ footer {
     padding-bottom: 60px;
 
     background-color: $color-bg-gray; 
+    background-size: cover;
 
     @media screen and (max-width:1199px){
         text-align: center;

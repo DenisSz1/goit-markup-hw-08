@@ -42,13 +42,9 @@ header .container {
         &.is-open {
             display: flex;
             flex-direction: column;
-            
-            
                             
-            padding-top: 48px;
-            padding-bottom: 48px;
-            padding-left: 40px;
-    
+            padding: 48px 83px 48px 40px;
+                
             background-color: $color-white-primary;
             
         }
@@ -144,7 +140,7 @@ header .container {
     
     .nav-social {
         display: flex;
-        
+                
     }
     
     .nav-social__item {

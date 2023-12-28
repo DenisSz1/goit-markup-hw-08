@@ -114,9 +114,7 @@ header .container {
   .menu-container.is-open {
     display: flex;
     flex-direction: column;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
+    padding: 48px 83px 48px 40px;
     background-color: rgb(255, 255, 255);
   }
   .menu-button {
@@ -1000,6 +998,7 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: rgb(47, 48, 58);
+  background-size: cover;
 }
 @media screen and (max-width: 1199px) {
   footer {
