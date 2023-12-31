@@ -14,11 +14,29 @@
     color: $color-title-primary;
     font-size: 36px;
     line-height: 1.17;
+
+    @media screen and (max-width:767px) {
+        font-size: 28px;
+    }
 }
 
 
 .client__item {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:479px) {
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+    }
+    }
+
+    @media screen and (min-width:480px) and (max-width:767px) {
         width: calc((100% - 30px) / 2);
         margin-right: 30px;
         margin-bottom: 30px;
@@ -73,7 +91,7 @@
         border: 1px solid $color-accent;
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (min-width:480px) and (max-width:767px) {
         width: 210px;
         
     }

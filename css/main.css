@@ -12,9 +12,14 @@ body {
 }
 
 .container {
-  width: 450px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -103,16 +108,123 @@ header .container {
   color: rgb(33, 150, 243);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .menu-container {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 480px;
+    max-width: 320px;
   }
   .menu-container.is-open {
     display: flex;
+    flex-direction: column;
+    padding: 38px 73px 38px 30px;
+    background-color: rgb(255, 255, 255);
+  }
+  .menu-button {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .menu-button:hover, .menu-button:focus {
+    fill: rgb(33, 150, 243);
+  }
+  .menu-button.is-open .icon-menu {
+    display: block;
+  }
+  .menu-button.is-open .icon-cross {
+    display: none;
+    position: absolute;
+  }
+  .menu-button .icon-menu {
+    display: none;
+  }
+  .nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .nav__link {
+    font-size: 30px;
+    line-height: 1.17;
+    color: rgb(33, 33, 33);
+    text-decoration: none;
+  }
+  .nav__link:focus, .nav__link:hover {
+    color: rgb(33, 150, 243);
+  }
+  .contact {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+  .contact__item:last-child {
+    margin-bottom: 32px;
+  }
+  .contact__tel {
+    margin-bottom: 32px;
+    color: rgb(33, 150, 243);
+    font-size: 24px;
+    line-height: 1.17;
+    font-weight: 500;
+    text-decoration: none;
+    transition-property: color;
+  }
+  .contact__link {
+    color: rgb(117, 117, 117);
+    font-size: 20px;
+    line-height: 1.17;
+    font-weight: 500;
+    text-decoration: none;
+    transition-property: color;
+  }
+  .contact__link:focus, .contact__link:hover,
+  .contact__tel:focus,
+  .contact__tel:hover {
+    color: rgb(33, 150, 243);
+  }
+  .contact__tel-icon,
+  .contact__link-icon {
+    display: none;
+  }
+  .nav__link--current {
+    color: rgb(33, 150, 243);
+  }
+  .nav-social {
+    display: flex;
+  }
+  .nav-social__item {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-right: 5px;
+  }
+  .nav-social__item:last-child {
+    border-right: none;
+  }
+  .nav-social__item:not(:last-child)::after {
+    content: "";
+    margin-right: 5px;
+  }
+  .nav-social__link {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.22;
+    font-weight: 500;
+    color: rgb(33, 150, 243);
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -50%;
+  }
+  .menu-container.is-open {
+    display: flex;
+    position: relative;
     flex-direction: column;
     padding: 48px 83px 48px 40px;
     background-color: rgb(255, 255, 255);
@@ -126,14 +238,17 @@ header .container {
     border: none;
     background-color: transparent;
   }
-  .menu-button .icon-cross {
-    display: none;
-  }
-  .menu-button.is-open .icon-cross {
-    display: block;
-    position: absolute;
+  .menu-button:hover, .menu-button:focus {
+    fill: rgb(33, 150, 243);
   }
   .menu-button.is-open .icon-menu {
+    display: block;
+  }
+  .menu-button.is-open .icon-cross {
+    display: none;
+    position: absolute;
+  }
+  .menu-button .icon-menu {
     display: none;
   }
   .nav__item:not(:last-child) {
@@ -256,7 +371,12 @@ header .container {
   line-height: 1.17;
   font-weight: 500;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .nav {
+    margin-bottom: 206px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .nav {
     margin-bottom: 306px;
   }
@@ -348,33 +468,44 @@ header .container {
 }
 
 /*main*/
-@media screen and (max-width: 767px) {
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: rgb(196, 196, 196);
+}
+@media screen and (max-width: 479px) {
   .main {
-    max-width: 480px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 118px;
-    padding-bottom: 118px;
-    background-color: rgb(196, 196, 196);
+    max-width: 300px;
+    height: 250px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header480.jpg);
     background-size: cover;
   }
 }
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
+  .main .box {
+    background-image: url("Header480@2x.jpg");
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .main {
+    max-width: 480px;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header480.jpg);
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 767px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (max-width: 767px) and (min-resolution: 2dppx) {
   .main .box {
     background-image: url("Header480@2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
   .main {
-    max-width: 768px;
     height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 118px;
-    padding-bottom: 118px;
-    background-color: rgb(196, 196, 196);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header768.jpg);
     background-size: cover;
   }
@@ -388,11 +519,8 @@ header .container {
   .main {
     max-width: 1600px;
     height: 600px;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: rgb(196, 196, 196);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header1200.jpg);
     background-size: cover;
   }
@@ -402,6 +530,7 @@ header .container {
     background-image: url("Header1200@2x.jpg");
   }
 }
+
 .main {
   background-color: rgb(47, 48, 58);
 }
@@ -418,7 +547,15 @@ header .container {
   text-align: center;
   color: rgb(255, 255, 255);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .main__banner {
+    width: 260px;
+    font-size: 16px;
+    line-height: 1.61;
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .main__banner {
     width: 360px;
     font-size: 26px;
@@ -449,6 +586,11 @@ header .container {
   line-height: 1.87;
   font-weight: 700;
   cursor: pointer;
+}
+@media screen and (max-width: 479px) {
+  .main__btn {
+    font-size: 10px;
+  }
 }
 
 /*modal*/
@@ -694,7 +836,12 @@ header .container {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .feature__item--size {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 480px) {
   .feature__item--size {
     width: 450px;
   }
@@ -745,7 +892,11 @@ header .container {
   color: rgb(33, 33, 33);
   font-size: 14px;
   line-height: 1.17;
-  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .feature__subtitle {
+    text-align: center;
+  }
 }
 
 .feature p {
@@ -837,7 +988,15 @@ header .container {
   background-color: #fff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.14);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .team-card__item {
+    width: 300px;
+  }
+  .team-card__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .team-card__item {
     width: 450px;
   }
@@ -928,8 +1087,26 @@ header .container {
   font-size: 36px;
   line-height: 1.17;
 }
-
 @media screen and (max-width: 767px) {
+  .section__title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .client__item {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .client__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .client__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .client__item {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
@@ -975,7 +1152,7 @@ header .container {
   fill: rgb(33, 150, 243);
   border: 1px solid rgb(33, 150, 243);
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .client__link {
     width: 210px;
   }
@@ -1006,10 +1183,24 @@ footer {
   }
 }
 
-@media screen and (min-width: 768px) {
+.wrap {
+  display: flex;
+  align-items: baseline;
+}
+@media screen and (max-width: 767px) {
   .wrap {
-    display: flex;
-    align-items: baseline;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .wrap {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrap {
+    margin-right: 93px;
   }
 }
 
@@ -1024,11 +1215,6 @@ footer {
   .info {
     display: flex;
     flex-direction: column;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .info {
-    margin-left: 61px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1102,11 +1288,6 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .communication {
     margin-left: 165px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .communication {
-    margin-right: 93px;
   }
 }
 
@@ -1215,7 +1396,13 @@ footer {
 .form__text:focus {
   border-color: rgb(33, 150, 243);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .form__text {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form__text {
     width: 450px;
     margin-bottom: 20px;
@@ -1239,6 +1426,18 @@ footer {
   font-size: 16px;
   line-height: 1.88;
   color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 479px) {
+  .form__btn {
+    display: flex;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+    align-items: center;
+    font-size: 12px;
+  }
 }
 
 .form__el {

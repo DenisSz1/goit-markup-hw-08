@@ -1,87 +1,96 @@
+.main {
+    margin-left: auto;
+    margin-right: auto;
+      
+    padding-top: 118px;
+    padding-bottom: 118px;
+    
+    background-color: rgba(196, 196, 196, 1);
 
+    @media screen and (max-width:479px) {
+            max-width: 300px;
+            height: 250px;
 
-@media screen and (max-width:767px) {
-    .main {
-        max-width: 480px;
-        height: 400px;
-        margin-left: auto;
-        margin-right: auto;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            
+            background-image: linear-gradient(
+                to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+                ),
+            url(../images/Header480.jpg);
+            background-size: cover;
         
-        padding-top: 118px;
-        padding-bottom: 118px;
-    
-        background-color: rgba(196, 196, 196, 1);
-        background-image: linear-gradient(
-            to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
-            ),
-        url(../images/Header480.jpg);
-        background-size: cover;
-    
-        @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-            .box {
-                background-image: url('Header480@2x.jpg');
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                .box {
+                    background-image: url('Header480@2x.jpg');
+                }
             }
-        }
-    
-    }
-}
-    
-@media screen and (min-width:768px) {
-    .main {
-        max-width: 768px;
-        height: 400px;
-        margin-left: auto;
-        margin-right: auto;
         
-        padding-top: 118px;
-        padding-bottom: 118px;
+        
+    }
     
-        background-color: rgba(196, 196, 196, 1);
-        background-image: linear-gradient(
-            to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
-            ),
-        url(../images/Header768.jpg);
-        background-size: cover;
-    
-        @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-            .box {
-                background-image: url('Header768@2x.jpg');
+    @media screen and (min-width:480px) and (max-width:767px) {
+            max-width: 480px;
+            height: 400px;
+            
+            background-image: linear-gradient(
+                to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+                ),
+            url(../images/Header480.jpg);
+            background-size: cover;
+        
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                .box {
+                    background-image: url('Header480@2x.jpg');
+                }
             }
-        }
+    }
+        
+    @media screen and (min-width:768px) {
+            height: 400px;
+            
+            background-image: linear-gradient(
+                to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+                ),
+            url(../images/Header768.jpg);
+            background-size: cover;
+        
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                .box {
+                    background-image: url('Header768@2x.jpg');
+                }
+            }
+    }
     
+    @media screen and (min-width:1200px) {
+            max-width: 1600px;
+            height: 600px;
+            
+            padding-top: 200px;
+            padding-bottom: 200px;
+        
+            background-image: linear-gradient(
+                to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+                ),
+            url(../images/Header1200.jpg);
+            background-size: cover;
+        
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                .box {
+                    background-image: url('Header1200@2x.jpg');
+                }
+            }
     }
 }
 
-@media screen and (min-width:1200px) {
-    .main {
-        max-width: 1600px;
-        height: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 200px;
-        padding-bottom: 200px;
-    
-        background-color: rgba(196, 196, 196, 1);
-        background-image: linear-gradient(
-            to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
-            ),
-        url(../images/Header1200.jpg);
-        background-size: cover;
-    
-        @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-            .box {
-                background-image: url('Header1200@2x.jpg');
-            }
-        }
-    
-    }
-}
 
 .main {
     background-color: $color-bg-gray;
@@ -100,7 +109,15 @@
 
     color: $color-white-primary;
 
-    @media screen and (max-width:1199px) {
+    @media screen and (max-width:479px) {
+        width: 260px;
+
+        font-size: 16px;
+        line-height: 1.61;
+        font-weight: 900;
+    }
+
+    @media screen and (min-width:480px) and (max-width:1199px) {
         width: 360px;
 
         font-size: 26px;
@@ -133,4 +150,9 @@
     line-height: 1.87;
     font-weight: 700;
     cursor: pointer;
+
+    @media screen and (max-width:479px) {
+        
+        font-size: 10px;
+    }
 }

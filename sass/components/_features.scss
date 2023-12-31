@@ -11,7 +11,11 @@
 }
 
 .feature__item--size {
-    @media screen and (max-width:767px){
+    @media screen and (max-width:479px){
+        width: 300px;   
+    }
+
+    @media screen and (min-width:480px){
         width: 450px;   
     }
 
@@ -69,7 +73,10 @@
 
     font-size: 14px;
     line-height: 1.17;
-    text-align: center;
+    @media screen and (max-width:767px) {
+        text-align: center;
+    }
+    
 }
 
 .feature p {

@@ -11,11 +11,25 @@ footer {
 }
 
 .wrap {
-    @media screen and (min-width:768px) {
         display: flex;
-        align-items: baseline
+        align-items: baseline;
 
-    }
+        @media screen and (max-width:767px){
+            display: block;
+
+        }
+    
+        @media screen and (min-width:768px) and (max-width:1199px){
+            padding-left: 76px;
+            padding-right: 89px;
+
+        }
+
+        @media screen and (min-width:1200px){
+            margin-right: 93px;
+
+        }
+
 }
 
 .footer {
@@ -29,10 +43,6 @@ footer {
     @media screen and (max-width:767px) {
         display: flex;
         flex-direction: column;
-    }
-
-    @media screen and (min-width:768px) and (max-width:1199px) {
-        margin-left: 61px;      
     }
 
     @media screen and (min-width:1200px) {
@@ -101,10 +111,6 @@ footer {
 
     @media screen and (min-width:768px) and (max-width:1199px){
         margin-left: 165px;       
-    }
-    
-    @media screen and (min-width:1200px) {
-        margin-right: 93px;       
     }
 }
 
@@ -216,7 +222,12 @@ footer {
         border-color: $color-accent;
     }
 
-    @media screen and (max-width:1199px){
+    @media screen and (max-width:479px){
+        width: 250px;
+        margin-bottom: 20px;    
+    }
+
+    @media screen and (min-width:480px) and (max-width:1199px){
         width: 450px;
         margin-bottom: 20px;    
     }
@@ -242,6 +253,20 @@ footer {
     font-size: 16px;
     line-height: 1.88;
     color: $color-white-primary;
+
+    @media screen and (max-width:479px){
+        display: flex;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 18px;
+        padding-right: 18px;
+
+        align-items: center;
+
+        font-size: 12px;
+         
+    }
 }
 
 .form__el {

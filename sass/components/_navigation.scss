@@ -30,20 +30,20 @@ header .container {
     color: $color-accent;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:479px) {
     .menu-container {
         display: none;
         position: absolute;
         top: 0;
         left: 0;
-        max-width: 480px;
+        max-width: 320px;
     
         
         &.is-open {
             display: flex;
             flex-direction: column;
                             
-            padding: 48px 83px 48px 40px;
+            padding: 38px 73px 38px 30px;
                 
             background-color: $color-white-primary;
             
@@ -57,20 +57,25 @@ header .container {
         margin-left: auto;
         padding: 0;
         border: none;
-        background-color: transparent;  
-    }
-    
-    .menu-button .icon-cross {
-        display: none;
-    }
-    
-    .menu-button.is-open .icon-cross {
-        display: block;
-        position: absolute;
-    
+        background-color: transparent; 
+        
+        &:hover,
+        &:focus {
+        fill: $color-accent;
+        }
     }
     
     .menu-button.is-open .icon-menu {
+        display: block;
+            
+    }
+    
+    .menu-button.is-open .icon-cross {
+        display: none;
+        position: absolute;
+    }
+
+    .menu-button .icon-menu {
         display: none;
     }
 
@@ -79,7 +84,7 @@ header .container {
     }
 
     .nav__link {
-        font-size: 40px;
+        font-size: 30px;
         line-height: 1.17;
         color: rgb(33, 33, 33);
         text-decoration: none;
@@ -87,7 +92,7 @@ header .container {
     }
     
     .nav__link:focus, .nav__link:hover {
-         color: rgb(33, 150, 243);
+         color: $color-accent;
     }
           
     .contact {
@@ -104,7 +109,153 @@ header .container {
     .contact__tel {
       margin-bottom: 32px;
      
-      color: rgb(33, 150, 243);
+      color: $color-accent;
+      font-size: 24px;
+      line-height: 1.17;
+      font-weight: 500;
+      text-decoration: none;
+      transition-property: color;
+      
+    }
+    
+    .contact__link {
+        color: $color-text-primary;
+        
+        font-size: 20px;
+        line-height: 1.17;
+        font-weight: 500;
+        text-decoration: none;
+        transition-property: color;
+        
+      }
+    .contact__link:focus, .contact__link:hover,
+    .contact__tel:focus,
+    .contact__tel:hover {
+      color: $color-accent;
+    }
+      
+    .contact__tel-icon,
+    .contact__link-icon {
+        display: none;
+    }
+      
+    .nav__link--current {
+      color: $color-accent;
+    }
+    
+    .nav-social {
+        display: flex;
+                
+    }
+    
+    .nav-social__item {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        margin-right: 5px;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:not(:last-child)::after {
+            content: '';
+            margin-right: 5px;
+        }
+
+    }
+
+    .nav-social__link{
+        text-decoration: none;
+    
+        font-size: 12px;
+        line-height: 1.22;
+        font-weight: 500;
+    
+        color: $color-accent;    
+    } 
+}
+
+
+@media screen and (min-width:480px) and (max-width:767px) {
+    .menu-container {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: -50%;
+        
+    
+        
+        &.is-open {
+            display: flex;
+            position: relative;;
+            flex-direction: column;
+                            
+            padding: 48px 83px 48px 40px;
+                
+            background-color: $color-white-primary;
+            
+        }
+    }
+    
+    .menu-button {
+        display: inline-flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        padding: 0;
+        border: none;
+        background-color: transparent; 
+        
+        &:hover,
+        &:focus {
+        fill: $color-accent;
+        }
+    }
+
+    .menu-button.is-open .icon-menu {
+        display: block;
+            
+    }
+    
+    .menu-button.is-open .icon-cross {
+        display: none;
+        position: absolute;
+    }
+
+    .menu-button .icon-menu {
+        display: none;
+    }    
+
+    .nav__item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    .nav__link {
+        font-size: 40px;
+        line-height: 1.17;
+        color: rgb(33, 33, 33);
+        text-decoration: none;
+       
+    }
+    
+    .nav__link:focus, .nav__link:hover {
+         color: $color-accent;
+    }
+          
+    .contact {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 64px;
+    }
+    
+    
+    .contact__item:last-child {
+        margin-bottom: 32px;
+    }
+    
+    .contact__tel {
+      margin-bottom: 32px;
+     
+      color: $color-accent;
       font-size: 34px;
       line-height: 1.17;
       font-weight: 500;
@@ -126,7 +277,7 @@ header .container {
     .contact__link:focus, .contact__link:hover,
     .contact__tel:focus,
     .contact__tel:hover {
-      color: rgb(33, 150, 243);
+      color: $color-accent;
     }
       
     .contact__tel-icon,
@@ -135,7 +286,7 @@ header .container {
     }
       
     .nav__link--current {
-      color: rgb(33, 150, 243);
+      color: $color-accent;
     }
     
     .nav-social {
@@ -233,7 +384,11 @@ header .container {
     line-height: 1.17;
     font-weight: 500; 
     
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:479px) {
+        margin-bottom: 206px;
+    }
+
+    @media screen and (min-width:480px) and (max-width:767px) {
         margin-bottom: 306px;
     }
 

@@ -15,7 +15,7 @@
         <div class="container aside">
             <a href="" class="logo"><span class="logo__web">Web</span>Studio</a>
             
-            <div class="menu-container is-open" data-menu>
+            <div class="menu-container " data-menu>
                 <nav>
                     <ul class="nav list">
                         <li class="nav__item">
@@ -161,13 +161,13 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team-card list">
                     <li class="team-card__item">
-                        <img 
-                        srcset="
-                        ./images/p-designer480.jpg 480w, 
-                        ./images/p-designer768.jpg 768w,
-                        ./images/p-designer1200.jpg 1200w"
-                        src="./images/p-designer480.jpg" alt="Product Designer" 
-                        sizes="(max-width:767px) 480px, (max-width:1199px) 768px, (min-width:1200px) 1200px ">
+                        <picture>
+                            <source srcset="./images/p-designer480.jpg 1x, ./images/p-designer480@2x.jpg 2x," media="(max-width:767px)">
+                            <source srcset="./images/p-designer768.jpg 1x, ./images/p-designer768@2x.jpg 2x," media="(max-width:1199px)">
+                            <source srcset="./images/p-designer1200.jpg 1x, ./images/p-designer1200@2x.jpg 2x," media="(min-width:1200px)">
+                            <img src="./images/p-designer768.jpg" alt="Product Designer">
+                        </picture>
+                        
                         <div class="person-descriptions">
                             <h3 class="person-descriptions__subtitle">Ігор Дем'яненко</h3>
                             <p>Product Designer</p>
@@ -204,13 +204,13 @@
                         </div>
                     </li>
                     <li class="team-card__item">
-                        <img 
-                        srcset="
-                        ./images/f-designer480.jpg 480w, 
-                        ./images/f-designer768.jpg 768w,
-                        ./images/f-designer1200.jpg 1200w"
-                        src="./images/f-designer480.jpg" alt="Frontend Developer" 
-                        sizes="(max-width:767px) 480px, (max-width:1199px) 768px, (min-width:1200px) 1200px ">
+                        <picture>
+                            <source srcset="./images/f-designer480.jpg 1x, ./images/f-designer480@2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/f-designer768.jpg 1x, ./images/f-designer768@2x.jpg 2x" media="(max-width:1199px)">
+                            <source srcset="./images/f-designer1200.jpg 1x, ./images/f-designer1200@2x.jpg 2x" media="(min-width:1200px)">
+                            <img src="./images/f-designer768.jpg" alt="Frontend Developer" >
+                        </picture>
+                        
                         <div class="person-descriptions">
                             <h3 class="person-descriptions__subtitle">Ольга Рєпіна</h3>
                             <p>Frontend Developer</p>
@@ -247,13 +247,13 @@
                         </div>
                     </li>
                     <li class="team-card__item">
-                        <img 
-                        srcset="
-                        ./images/marketing480.jpg 480w, 
-                        ./images/marketing768.jpg 768w,
-                        ./images/marketing1200.jpg 1200w"
-                        src="./images/marketing480.jpg" alt="Marketing" 
-                        sizes="(max-width:767px) 480px, (max-width:1199px) 768px, (min-width:1200px) 1200px ">
+                        <picture>
+                            <source srcset="./images/marketing480.jpg 1x, ./images/marketing480@2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/marketing768.jpg 1x, ./images/marketing768@2x.jpg 2x" media="(max-width:1199px)">
+                            <source srcset="./images/marketing1200.jpg 1x, ./images/marketing1200@2x.jpg 2x" media="(min-width:1200px)">
+                            <img src="./images/marketing768.jpg" alt="Marketing">
+                        </picture>
+                        
                         <div class="person-descriptions">
                             <h3 class="person-descriptions__subtitle">Микола Тарасов</h3>
                             <p>Marketing</p>
@@ -290,13 +290,13 @@
                         </div>
                     </li>
                     <li class="team-card__item">
-                        <img 
-                        srcset="
-                        ./images/ui480.jpg 480w, 
-                        ./images/ui768.jpg 768w,
-                        ./images/ui1200.jpg 1200w"
-                        src="./images/ui480.jpg" alt="UI Designer" 
-                        sizes="(max-width:767px) 480px, (max-width:1199px) 768px, (min-width:1200px) 1200px ">
+                        <picture>
+                            <source srcset="./images/ui480.jpg 1x, ./images/ui480@2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/ui768.jpg 1x, ./images/ui768@2x.jpg 2x" media="(max-width:1199px)">
+                            <source srcset="./images/ui1200.jpg 1x, ./images/ui1200@2x.jpg 2x" media="(min-width:1200px)">
+                            <img src="./images/ui768.jpg" alt="UI Designer">
+                        </picture>
+                        
                         <div class="person-descriptions">
                             <h3 class="person-descriptions__subtitle">Михайло Єрмаков</h3>
                             <p>UI Designer</p>
@@ -337,7 +337,7 @@
             
         </section>
 
-        <section class="section wrap">
+        <section class="section ">
             <div class="container">
                 <h2 class="section__title">Постійні клієнти</h2>
                 <ul class="client list">
