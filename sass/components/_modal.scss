@@ -33,7 +33,13 @@
     @extend %transition;
     transform: translate(-50%, -50%) scale(1);
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 479px) {
+        width: 300px;  
+        height: 459px;
+        padding: 40px 20px 30px 20px;
+    }
+
+    @media screen and (min-width:480px) and (max-width: 1199px) {
         width: 450px;  
         height: 609px;
     }
@@ -65,6 +71,10 @@
     &:focus {
         fill: $color-accent;
     }
+
+    @media screen and (max-width: 479px) {
+        padding: 4px;  
+    }
 }
 
 .modal__title {
@@ -78,6 +88,10 @@
     color: $color-title-primary;
     font-family: Roboto;
     letter-spacing: 0.03em;
+
+    @media screen and (max-width: 479px) {
+        font-size: 12px;
+    }
 }
 
 .form-el {
@@ -90,6 +104,10 @@
 
     font-size: 12px;
     line-height: 1.17;
+
+    @media screen and (max-width: 479px) {
+        font-size: 10px;
+    }
 }
 
 .form-el:not(:first-child) {
@@ -122,7 +140,12 @@
         border-color: $color-accent;
     }
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 479px) {
+        width: 255px;  
+        height: 30px;
+    }
+
+    @media screen and (min-width:480px) and (max-width: 1199px) {
         width: 370px;   
     }
 
@@ -140,12 +163,15 @@
     @extend %transition;
 }
 
+
 .form-el--size {
-    height: 138px;
+    @media screen and (min-width: 480px) {
+        height: 138px;
+    }
+    
 }
 
 .form-el__area {
-    width: 448px;
     height: 120px;
     resize: none;
     border: 1px solid $color-border-form;
@@ -158,13 +184,22 @@
     &::placeholder {
         font-size: 12px;
         line-height: 1.17;
+
+        @media screen and (max-width: 479px) {
+            font-size: 10px;
+        }
     }
 
     &:focus {
         border-color: $color-accent;
     }
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 479px) {
+        width: 255px;
+        height: 80px;
+    }
+
+    @media screen and (min-width:480px) and (max-width: 1199px) {
         width: 370px;
     }
 
@@ -175,17 +210,24 @@
 
 .form-box {
     margin: 20px 12px 0 13px;
+    
+    @media screen and (max-width: 479px) {
+        margin: 10px 8px 0 8px;
+    }
 }
 
 .label {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    line-height: 1.17;
     font-weight: 400;
-    
-    @media screen and (max-width: 1199px) {
+
+    @media screen and (max-width: 479px) {
+        font-size: 10px;
+    }
+
+    @media screen and (min-width:480px) and (max-width: 1199px) {
         font-size: 12px;
-        line-height: 1.17;
     }
 
     @media screen and (min-width: 1200px) {
@@ -231,6 +273,10 @@
 .label__check-link {
     margin-left: 4px;
     color: $color-accent;
+
+    @media screen and (max-width: 479px) {
+        font-size: 10px;
+    }
 }
 
 .send-btn {
@@ -255,4 +301,12 @@
 
 
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    @media screen and (max-width: 479px) {
+        width: 150px;
+        height: 35px;
+
+        margin-top: 15px;
+        font-size: 12px;
+    }
 }

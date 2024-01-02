@@ -1,5 +1,5 @@
 /*variable*/
-.communication-list__link, .client__link, .social__link, .form-el__icon, .form-el__content, .close-btn, .modal, .backdrop {
+.communication-list__link, .overlay__description, .portfolio__link, .filter__btn, .client__link, .social__link, .form-el__icon, .form-el__content, .close-btn, .modal, .backdrop {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -111,15 +111,18 @@ header .container {
 @media screen and (max-width: 479px) {
   .menu-container {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    max-width: 320px;
+    left: -50%;
+    max-width: 100%;
+    transform: translateX(100%);
   }
   .menu-container.is-open {
     display: flex;
+    position: relative;
     flex-direction: column;
-    padding: 38px 73px 38px 30px;
+    transform: translateX(0);
+    padding: 48px 83px 48px 40px;
     background-color: rgb(255, 255, 255);
   }
   .menu-button {
@@ -218,14 +221,17 @@ header .container {
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .menu-container {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -50%;
+    max-width: 100%;
+    transform: translateX(100%);
   }
   .menu-container.is-open {
     display: flex;
     position: relative;
     flex-direction: column;
+    transform: translateX(0);
     padding: 48px 83px 48px 40px;
     background-color: rgb(255, 255, 255);
   }
@@ -621,7 +627,14 @@ header .container {
   transition-property: transform;
   transform: translate(-50%, -50%) scale(1);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 300px;
+    height: 459px;
+    padding: 40px 20px 30px 20px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 450px;
     height: 609px;
@@ -647,6 +660,11 @@ header .container {
 .close-btn:hover, .close-btn:focus {
   fill: rgb(33, 150, 243);
 }
+@media screen and (max-width: 479px) {
+  .close-btn {
+    padding: 4px;
+  }
+}
 
 .modal__title {
   display: flex;
@@ -659,6 +677,11 @@ header .container {
   font-family: Roboto;
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 479px) {
+  .modal__title {
+    font-size: 12px;
+  }
+}
 
 .form-el {
   position: relative;
@@ -669,6 +692,11 @@ header .container {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
+}
+@media screen and (max-width: 479px) {
+  .form-el label {
+    font-size: 10px;
+  }
 }
 
 .form-el:not(:first-child) {
@@ -693,7 +721,13 @@ header .container {
 .form-el__content:focus + .form-el_icon {
   border-color: rgb(33, 150, 243);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .form-el__content {
+    width: 255px;
+    height: 30px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form-el__content {
     width: 370px;
   }
@@ -711,12 +745,13 @@ header .container {
   transition-property: fill;
 }
 
-.form-el--size {
-  height: 138px;
+@media screen and (min-width: 480px) {
+  .form-el--size {
+    height: 138px;
+  }
 }
 
 .form-el__area {
-  width: 448px;
   height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -733,10 +768,24 @@ header .container {
   font-size: 12px;
   line-height: 1.17;
 }
+@media screen and (max-width: 479px) {
+  .form-el__area::-moz-placeholder {
+    font-size: 10px;
+  }
+  .form-el__area::placeholder {
+    font-size: 10px;
+  }
+}
 .form-el__area:focus {
   border-color: rgb(33, 150, 243);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .form-el__area {
+    width: 255px;
+    height: 80px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form-el__area {
     width: 370px;
   }
@@ -750,17 +799,26 @@ header .container {
 .form-box {
   margin: 20px 12px 0 13px;
 }
+@media screen and (max-width: 479px) {
+  .form-box {
+    margin: 10px 8px 0 8px;
+  }
+}
 
 .label {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  line-height: 1.17;
   font-weight: 400;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .label {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .label {
     font-size: 12px;
-    line-height: 1.17;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -804,6 +862,11 @@ header .container {
   margin-left: 4px;
   color: rgb(33, 150, 243);
 }
+@media screen and (max-width: 479px) {
+  .label__check-link {
+    font-size: 10px;
+  }
+}
 
 .send-btn {
   display: block;
@@ -822,6 +885,14 @@ header .container {
   font-weight: 700;
   line-height: 1.86;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 479px) {
+  .send-btn {
+    width: 150px;
+    height: 35px;
+    margin-top: 15px;
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1169,7 +1240,125 @@ header .container {
 }
 
 /*btn portfolio*/
+.filter {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 400px;
+  }
+}
+
+.filter__btn {
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  color: rgb(33, 33, 33);
+  background: rgb(245, 244, 250);
+  font-size: 16px;
+  line-height: 1.63;
+  font-weight: 500;
+  cursor: pointer;
+  transition-property: color, background, box-shadow;
+}
+.filter__btn:focus, .filter__btn:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(33, 150, 243);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+@media screen and (max-width: 767px) {
+  .filter__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+}
+
 /*portfolio*/
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  list-style: none;
+}
+
+.portfolio__card {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.portfolio__card:nth-child(3n) {
+  margin-right: 0;
+}
+.portfolio__card:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition-property: box-shadow;
+}
+.portfolio__link:hover .overlay__description, .portfolio__link:hover, .portfolio__link:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+  transform: translateY(0);
+}
+
+.overlay__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: rgb(255, 255, 255);
+  transform: translateY(100%);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  transition-property: transform;
+}
+
+.card-border {
+  padding: 20px 24px 20px 24px;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-color: #EEEEEE;
+}
+
+.card-border__title {
+  margin: 0;
+  color: rgb(33, 33, 33);
+  font-size: 18px;
+  line-height: 2;
+}
+
+.card-border__description {
+  margin: 4px 0 0 0;
+  color: rgb(117, 117, 117);
+  font-size: 16px;
+  line-height: 1.88;
+}
+
 /*footer*/
 footer {
   padding-top: 60px;

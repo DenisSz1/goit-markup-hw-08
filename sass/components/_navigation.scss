@@ -33,17 +33,20 @@ header .container {
 @media screen and (max-width:479px) {
     .menu-container {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
-        left: 0;
-        max-width: 320px;
-    
+        left: -50%;
+        max-width: 100%;
+
+        transform: translateX(100%);
         
         &.is-open {
             display: flex;
+            position: relative;
             flex-direction: column;
+            transform: translateX(0);
                             
-            padding: 38px 73px 38px 30px;
+            padding: 48px 83px 48px 40px;
                 
             background-color: $color-white-primary;
             
@@ -73,6 +76,7 @@ header .container {
     .menu-button.is-open .icon-cross {
         display: none;
         position: absolute;
+        
     }
 
     .menu-button .icon-menu {
@@ -178,16 +182,18 @@ header .container {
 @media screen and (min-width:480px) and (max-width:767px) {
     .menu-container {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: -50%;
-        
-    
+        max-width: 100%;
+
+        transform: translateX(100%);
         
         &.is-open {
             display: flex;
-            position: relative;;
+            position: relative;
             flex-direction: column;
+            transform: translateX(0);
                             
             padding: 48px 83px 48px 40px;
                 
