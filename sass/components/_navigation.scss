@@ -33,23 +33,22 @@ header .container {
 @media screen and (max-width:479px) {
     .menu-container {
         display: none;
-        position: fixed;
-        top: 0;
-        left: -50%;
-        max-width: 100%;
-
+        
         transform: translateX(100%);
         
         &.is-open {
             display: flex;
-            position: relative;
+            position: fixed;
+            left: 0;
             flex-direction: column;
+
+            width: 100%;
             transform: translateX(0);
                             
             padding: 48px 83px 48px 40px;
                 
             background-color: $color-white-primary;
-            
+
         }
     }
     
@@ -61,26 +60,30 @@ header .container {
         padding: 0;
         border: none;
         background-color: transparent; 
+        position: relative;
+        
         
         &:hover,
         &:focus {
         fill: $color-accent;
         }
-    }
-    
-    .menu-button.is-open .icon-menu {
-        display: block;
-            
-    }
-    
-    .menu-button.is-open .icon-cross {
-        display: none;
-        position: absolute;
-        
-    }
 
-    .menu-button .icon-menu {
-        display: none;
+        &.is-open .icon-menu {
+            display: block;
+        }
+        
+        &.is-open .icon-cross {
+            display: none;
+        
+        }
+    
+        & .icon-cross {
+            display: block;
+        }
+    
+        & .icon-menu {
+            display: none;
+        } 
     }
 
     .nav__item:not(:last-child) {
@@ -182,23 +185,22 @@ header .container {
 @media screen and (min-width:480px) and (max-width:767px) {
     .menu-container {
         display: none;
-        position: fixed;
-        top: 0;
-        left: -50%;
-        max-width: 100%;
-
+        
         transform: translateX(100%);
         
         &.is-open {
             display: flex;
-            position: relative;
+            position: fixed;
+            left: 0;
             flex-direction: column;
+
+            width: 100%;
             transform: translateX(0);
                             
             padding: 48px 83px 48px 40px;
                 
             background-color: $color-white-primary;
-            
+
         }
     }
     
@@ -210,26 +212,31 @@ header .container {
         padding: 0;
         border: none;
         background-color: transparent; 
+        position: relative;
+        
         
         &:hover,
         &:focus {
         fill: $color-accent;
         }
-    }
 
-    .menu-button.is-open .icon-menu {
-        display: block;
-            
-    }
+        &.is-open .icon-menu {
+            display: block;
+        }
+        
+        &.is-open .icon-cross {
+            display: none;
+        
+        }
     
-    .menu-button.is-open .icon-cross {
-        display: none;
-        position: absolute;
-    }
-
-    .menu-button .icon-menu {
-        display: none;
-    }    
+        & .icon-cross {
+            display: block;
+        }
+    
+        & .icon-menu {
+            display: none;
+        }
+    }  
 
     .nav__item:not(:last-child) {
         margin-bottom: 32px;
