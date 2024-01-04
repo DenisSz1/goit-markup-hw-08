@@ -156,8 +156,9 @@ header .container {
   .menu-button .icon-menu {
     display: none;
   }
-  .menu-container.is-open + .icon-cross {
+  .menu-container.is-open + .menu-button {
     position: fixed;
+    right: 0;
   }
   .nav__item:not(:last-child) {
     margin-bottom: 32px;
@@ -275,6 +276,7 @@ header .container {
   }
   .menu-container.is-open + .menu-button {
     position: fixed;
+    right: 0;
   }
   .nav__item:not(:last-child) {
     margin-bottom: 32px;

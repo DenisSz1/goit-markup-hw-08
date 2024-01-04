@@ -89,8 +89,9 @@ header .container {
         } 
     }
 
-    .menu-container.is-open + .icon-cross  {
+    .menu-container.is-open + .menu-button  {
         position: fixed;
+        right: 0;
    }
 
     .nav__item:not(:last-child) {
@@ -248,6 +249,7 @@ header .container {
 
     .menu-container.is-open + .menu-button  {
         position: fixed;
+        right: 0;
         
    }
 
