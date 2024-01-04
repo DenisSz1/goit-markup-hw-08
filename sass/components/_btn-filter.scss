@@ -2,7 +2,12 @@
     display: flex;
     justify-content: center;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+        flex-wrap: wrap;
+        justify-content: start;
+        width: 300px;
+    }
+    @media screen and (min-width:480px) and (max-width: 767px) {
         flex-wrap: wrap;
         justify-content: start;
         width: 400px;

@@ -8,7 +8,7 @@
     background-color: rgba(196, 196, 196, 1);
 
     @media screen and (max-width:479px) {
-            max-width: 300px;
+            
             height: 250px;
 
             padding-top: 60px;
@@ -21,18 +21,18 @@
             background-size: cover;
         
             @media (min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi),
-                (min-resolution: 2dppx) {
-                .box {
-                    background-image: url('Header480@2x.jpg');
-                }
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('/images/Header480@2x.jpg');
+                
             }
         
         
     }
     
     @media screen and (min-width:480px) and (max-width:767px) {
-            max-width: 480px;
+            
             height: 400px;
             
             background-image: linear-gradient(
@@ -42,11 +42,11 @@
             background-size: cover;
         
             @media (min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi),
-                (min-resolution: 2dppx) {
-                .box {
-                    background-image: url('Header480@2x.jpg');
-                }
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('/images/Header480@2x.jpg');
+                
             }
     }
         
@@ -60,11 +60,10 @@
             background-size: cover;
         
             @media (min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi),
-                (min-resolution: 2dppx) {
-                .box {
-                    background-image: url('Header768@2x.jpg');
-                }
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('/images/Header768@2x.jpg');
             }
     }
     
@@ -82,11 +81,10 @@
             background-size: cover;
         
             @media (min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi),
-                (min-resolution: 2dppx) {
-                .box {
-                    background-image: url('Header1200@2x.jpg');
-                }
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('/images/Header1200@2x.jpg');
             }
     }
 }

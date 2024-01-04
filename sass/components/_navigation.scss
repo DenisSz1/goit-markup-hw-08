@@ -43,6 +43,7 @@ header .container {
             flex-direction: column;
 
             width: 100%;
+            height: 100%;
             transform: translateX(0);
                             
             padding: 48px 83px 48px 40px;
@@ -117,7 +118,7 @@ header .container {
       margin-bottom: 32px;
      
       color: $color-accent;
-      font-size: 24px;
+      font-size: 20px;
       line-height: 1.17;
       font-weight: 500;
       text-decoration: none;
@@ -128,7 +129,7 @@ header .container {
     .contact__link {
         color: $color-text-primary;
         
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.17;
         font-weight: 500;
         text-decoration: none;
@@ -195,12 +196,13 @@ header .container {
             flex-direction: column;
 
             width: 100%;
+            height: 100%;
             transform: translateX(0);
                             
             padding: 48px 83px 48px 40px;
                 
-            background-color: $color-white-primary;
-
+            background-color: $color-white-primary;   
+            z-index: 2;  
         }
     }
     
@@ -226,11 +228,11 @@ header .container {
         
         &.is-open .icon-cross {
             display: none;
-        
         }
     
         & .icon-cross {
             display: block;
+            z-index: 1;
         }
     
         & .icon-menu {
@@ -398,7 +400,7 @@ header .container {
     font-weight: 500; 
     
     @media screen and (max-width:479px) {
-        margin-bottom: 206px;
+        margin-bottom: 156px;
     }
 
     @media screen and (min-width:480px) and (max-width:767px) {
