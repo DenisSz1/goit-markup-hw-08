@@ -63,7 +63,7 @@ header .container {
         border: none;
         background-color: transparent; 
         position: relative;
-        
+        z-index: 5;
         
         &:hover,
         &:focus {
@@ -88,6 +88,10 @@ header .container {
             display: none;
         } 
     }
+
+    .menu-container.is-open + .icon-cross  {
+        position: fixed;
+   }
 
     .nav__item:not(:last-child) {
         margin-bottom: 32px;
@@ -217,6 +221,7 @@ header .container {
         border: none;
         background-color: transparent; 
         position: relative;
+        z-index: 5;
         
         
         &:hover,
@@ -234,13 +239,17 @@ header .container {
     
         & .icon-cross {
             display: block;
-            z-index: 2;
         }
     
         & .icon-menu {
             display: none;
         }
     }  
+
+    .menu-container.is-open + .menu-button  {
+        position: fixed;
+        
+   }
 
     .nav__item:not(:last-child) {
         margin-bottom: 32px;

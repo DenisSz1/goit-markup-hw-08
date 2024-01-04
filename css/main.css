@@ -138,6 +138,7 @@ header .container {
     border: none;
     background-color: transparent;
     position: relative;
+    z-index: 5;
   }
   .menu-button:hover, .menu-button:focus {
     fill: rgb(33, 150, 243);
@@ -154,6 +155,9 @@ header .container {
   }
   .menu-button .icon-menu {
     display: none;
+  }
+  .menu-container.is-open + .icon-cross {
+    position: fixed;
   }
   .nav__item:not(:last-child) {
     margin-bottom: 32px;
@@ -252,6 +256,7 @@ header .container {
     border: none;
     background-color: transparent;
     position: relative;
+    z-index: 5;
   }
   .menu-button:hover, .menu-button:focus {
     fill: rgb(33, 150, 243);
@@ -264,10 +269,12 @@ header .container {
   }
   .menu-button .icon-cross {
     display: block;
-    z-index: 2;
   }
   .menu-button .icon-menu {
     display: none;
+  }
+  .menu-container.is-open + .menu-button {
+    position: fixed;
   }
   .nav__item:not(:last-child) {
     margin-bottom: 32px;
