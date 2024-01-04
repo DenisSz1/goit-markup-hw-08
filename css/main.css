@@ -127,6 +127,7 @@ header .container {
     transform: translateX(0);
     padding: 48px 83px 48px 40px;
     background-color: rgb(255, 255, 255);
+    z-index: 1;
   }
   .menu-button {
     display: inline-flex;
@@ -149,6 +150,7 @@ header .container {
   }
   .menu-button .icon-cross {
     display: block;
+    z-index: 2;
   }
   .menu-button .icon-menu {
     display: none;
@@ -239,7 +241,7 @@ header .container {
     transform: translateX(0);
     padding: 48px 83px 48px 40px;
     background-color: rgb(255, 255, 255);
-    z-index: 2;
+    z-index: 1;
   }
   .menu-button {
     display: inline-flex;
@@ -262,7 +264,7 @@ header .container {
   }
   .menu-button .icon-cross {
     display: block;
-    z-index: 1;
+    z-index: 2;
   }
   .menu-button .icon-menu {
     display: none;

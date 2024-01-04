@@ -49,6 +49,7 @@ header .container {
             padding: 48px 83px 48px 40px;
                 
             background-color: $color-white-primary;
+            z-index: 1;
 
         }
     }
@@ -80,6 +81,7 @@ header .container {
     
         & .icon-cross {
             display: block;
+            z-index: 2 ;
         }
     
         & .icon-menu {
@@ -202,7 +204,7 @@ header .container {
             padding: 48px 83px 48px 40px;
                 
             background-color: $color-white-primary;   
-            z-index: 2;  
+            z-index: 1;  
         }
     }
     
@@ -232,7 +234,7 @@ header .container {
     
         & .icon-cross {
             display: block;
-            z-index: 1;
+            z-index: 2;
         }
     
         & .icon-menu {
