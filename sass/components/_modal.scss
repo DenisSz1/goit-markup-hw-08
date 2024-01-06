@@ -213,7 +213,7 @@
     margin: 20px 12px 0 13px;
     
     @media screen and (max-width: 479px) {
-        margin: 10px 8px 0 8px;
+        margin: 10px 4px 0 4px;
     }
 }
 
@@ -224,7 +224,7 @@
     font-weight: 400;
 
     @media screen and (max-width: 479px) {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     @media screen and (min-width:480px) and (max-width: 1199px) {
@@ -261,6 +261,11 @@
     &:focus {
         border: 2px solid $color-accent;
     }
+
+    @media screen and (max-width: 479px) {
+        width: 11px;
+        height: 10px;
+    }
 }
 
 .label__checkbox:checked + .label__check-icon {
@@ -276,7 +281,7 @@
     color: $color-accent;
 
     @media screen and (max-width: 479px) {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 

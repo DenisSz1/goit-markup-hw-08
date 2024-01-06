@@ -134,6 +134,7 @@ header .container {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: auto;
+    margin-right: 15px;
     padding: 0;
     border: none;
     background-color: transparent;
@@ -253,6 +254,7 @@ header .container {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: auto;
+    margin-right: 15px;
     padding: 0;
     border: none;
     background-color: transparent;
@@ -821,7 +823,7 @@ header .container {
 }
 @media screen and (max-width: 479px) {
   .form-box {
-    margin: 10px 8px 0 8px;
+    margin: 10px 4px 0 4px;
   }
 }
 
@@ -833,7 +835,7 @@ header .container {
 }
 @media screen and (max-width: 479px) {
   .label {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
@@ -869,6 +871,12 @@ header .container {
 .label__check-icon:focus {
   border: 2px solid rgb(33, 150, 243);
 }
+@media screen and (max-width: 479px) {
+  .label__check-icon {
+    width: 11px;
+    height: 10px;
+  }
+}
 
 .label__checkbox:checked + .label__check-icon {
   border-color: transparent;
@@ -884,7 +892,7 @@ header .container {
 }
 @media screen and (max-width: 479px) {
   .label__check-link {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
@@ -1355,10 +1363,6 @@ header .container {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio__card {
     width: 354px;
-    height: 404px;
-  }
-  .portfolio__card:nth-child(-n+2) {
-    height: 440px;
   }
   .portfolio__card:nth-child(2n) {
     margin-right: 0;
@@ -1387,6 +1391,7 @@ header .container {
 .portfolio__link {
   display: flex;
   flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition-property: box-shadow;
 }
@@ -1424,12 +1429,15 @@ header .container {
   border-width: 0 1px 1px 1px;
   border-color: #EEEEEE;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-border {
+    flex-grow: 1;
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .card-border--size {
-    height: 146px;
-    padding-right: 54px;
-    padding-bottom: 15px;
+    padding-right: 50px;
   }
 }
 

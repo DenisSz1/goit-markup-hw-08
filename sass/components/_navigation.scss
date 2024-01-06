@@ -59,6 +59,7 @@ header .container {
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: auto;
+        margin-right: 15px;
         padding: 0;
         border: none;
         background-color: transparent; 
@@ -218,11 +219,13 @@ header .container {
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: auto;
+        margin-right: 15px;
         padding: 0;
         border: none;
         background-color: transparent; 
         position: relative;
         z-index: 5;
+        
         
         
         &:hover,
